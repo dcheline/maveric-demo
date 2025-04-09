@@ -23,15 +23,27 @@ const SimulationSetup = () => {
       <h1>Maveric Demo</h1>
       <h2>Environment Setup / Layout Selection</h2>
       <div className="layout-options">
-        <button className={layout === 'Urban' ? 'selected' : ''} onClick={() => handleLayoutClick('Urban')}>🏙️ Urban</button>
-        <button className={layout === 'Rural' ? 'selected' : ''} onClick={() => handleLayoutClick('Rural')}>🏞️ Rural</button>
-        <button className={layout === 'Campus' ? 'selected' : ''} onClick={() => handleLayoutClick('Campus')}>🏫 Campus</button>
-        <button className={layout === 'Both' ? 'selected' : ''} onClick={() => handleLayoutClick('Both')}>🏢 Both</button>
-        <button className={layout === 'House' ? 'selected' : ''} onClick={() => handleLayoutClick('House')}>🏠 House</button>
-        <button className={layout === 'Office' ? 'selected' : ''} onClick={() => handleLayoutClick('Office')}>🏬 Office</button>
-        <button className="btn-load-layout" onClick={() => setShowModal(true)}>Load your layout</button>
+          <button className={layout === 'Urban' ? 'selected' : ''} onClick={() => handleLayoutClick('Urban')}>
+          <span style={{ fontSize: '2em' }}>🏙️</span> Urban
+          </button>
+          <button className={layout === 'Rural' ? 'selected' : ''} onClick={() => handleLayoutClick('Rural')}>
+          <span style={{ fontSize: '2em' }}>🏞️</span> Rural
+          </button>
+          <button className={layout === 'Campus' ? 'selected' : ''} onClick={() => handleLayoutClick('Campus')}>
+          <span style={{ fontSize: '2em' }}>🏫</span> Campus
+          </button>
+          <button className={layout === 'Both' ? 'selected' : ''} onClick={() => handleLayoutClick('Both')}>
+          <span style={{ fontSize: '2em' }}>🏢</span> Both
+          </button>
+          <button className={layout === 'House' ? 'selected' : ''} onClick={() => handleLayoutClick('House')}>
+          <span style={{ fontSize: '2em' }}>🏠</span> House
+          </button>
+          <button className={layout === 'Office' ? 'selected' : ''} onClick={() => handleLayoutClick('Office')}>
+          <span style={{ fontSize: '2em' }}>🏬</span> Office
+          </button>
+          <button className="btn-load-layout" onClick={() => setShowModal(true)} style={{ width: '315%' }}>Load your layout
+          </button>
       </div>
-
       <div className="options-container">
         <div className="options-column">
           <h3>Traffic Density</h3>

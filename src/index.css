@@ -55,6 +55,10 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  margin-bottom: 30px;
+}
+
 .layout-options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -63,7 +67,7 @@ h1 {
 }
 
 .layout-options button {
-  padding: 10px;
+  padding: 20px;
   border: 2px solid #ccc;
   border-radius: 8px;
   background-color: transparent;
@@ -109,8 +113,8 @@ h1 {
 
 .btn-load-layout {
   @apply bg-gray-300 text-black;
-  width: 100%;
-  margin: 20px 0;
+  width: 200px;
+  margin: 20px auto;
 }
 
 .button-container {
