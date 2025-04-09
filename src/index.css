@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900;
+    @apply bg-gray-50 text-gray-900 text-lg;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-semibold text-xl;
   }
 }
 
@@ -25,13 +25,21 @@
     @apply bg-gray-200 text-gray-700 hover:bg-gray-300;
   }
 
+  .btn-mobility {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+
+  .btn-results {
+    @apply bg-purple-400 text-white hover:bg-purple-500;
+  }
+
   .card {
     @apply bg-white rounded-lg shadow-md p-6;
   }
 }
 
 .simulation-setup {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
@@ -40,30 +48,82 @@
   font-family: Arial, sans-serif;
 }
 
-h2 {
+h1 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
-.layout-options, .traffic-options, .network-options {
-  display: flex;
-  justify-content: space-between;
+.layout-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-bottom: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.layout-options button {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 24px;
+  color: #333;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
 }
 
-button:hover {
-  background-color: #45a049;
+.layout-options button:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.layout-options button.selected {
+  border-color: #4CAF50;
+  background-color: #e0f7fa;
+}
+
+.layout-options button img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+
+.options-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-primary, .btn-mobility, .btn-results {
+  width: 200px;
+  height: 60px;
+}
+
+.btn-load-layout {
+  @apply bg-gray-300 text-black;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
 }
 
 label {
@@ -74,4 +134,23 @@ label {
 
 input[type="radio"] {
   margin-right: 8px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
