@@ -20,7 +20,6 @@ const SimulationSetup = () => {
 
   return (
     <div className="simulation-setup">
-      <h1>Maveric Demo</h1>
       <h2>Environment Setup / Layout Selection</h2>
       <div className="layout-options">
           <button className={layout === 'Urban' ? 'selected' : ''} onClick={() => handleLayoutClick('Urban')}>
@@ -123,10 +122,6 @@ const SimulationSetup = () => {
           </div>
         </div>
       )}
-
-      <div className="footer">
-        © 2025 Maveric Demo
-      </div>
     </div>
   );
 };
